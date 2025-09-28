@@ -1,0 +1,90 @@
+---
+description: Conventional commit
+globs:
+alwaysApply: true
+---
+
+
+## Git Commit Message Generation
+
+Conventional commits are a standardized way to format commit messages. They provide a clear and consistent structure for communicating changes in a codebase. Using conventional commits helps team members understand the purpose of each commit, making it easier to track and manage code changes.
+
+### Commit Message Structure
+
+A conventional commit message consists of a **type**, an **optional scope**, and a **message**. The format is as follows:
+
+```
+<type>[optional scope] <description>
+```
+
+### Type
+
+The **type** describes the purpose or category of the commit. It should be one of the following:
+
+- **feat**: Used for introducing a new feature or functionality.
+  Example: `feat(auth) Add user authentication feature`
+- **fix**: Used when addressing a bug or issue in the codebase.
+  Example: `fix(calculations) Correct calculation in revenue calculation`
+- **docs**: Used for changes to documentation, including comments in the code, README files, or any other project-related documentation.
+  Example: `docs(api) Update API documentation`
+- **style**: Used for code style changes, such as formatting, indentation, and whitespace adjustments.
+  Example: `style(formatting) Format code according to style guide`
+- **refactor**: Used for changes that do not introduce new features or fix issues but involve restructuring or optimizing existing code.
+  Example: `refactor(structure) Reorganize folder structure`
+- **perf**: Used for changes aimed at improving the performance of the codebase.
+  Example: `perf(queries) Optimize database queries for faster response times`
+- **test**: Used for adding or modifying tests for the codebase, including unit tests, integration tests, and other forms of testing.
+  Example: `test(auth) Add unit tests for user authentication`
+- **build**: Used for changes that affect the build system or external dependencies.
+  Example: `build(gulp) Update build process for better asset management`
+- **ci**: Used for changes to our CI (Continuous Integration) configuration files and scripts.
+  Example: `ci Configure Travis CI for automated testing`
+- **chore**: Used for maintenance tasks, build processes or other non-user-facing changes.
+  Example: `chore(build) Update dependencies`
+- **revert**: Used when reverting a previous commit.
+  Example: `revert Revert changes from commit abcdefg`
+
+### Scope (Optional)
+
+The **scope** is an optional field that specifies the module, component, or area of the codebase affected by the commit. It helps provide additional context.
+
+**Scopes for this Next.js project:**
+- `app`: Application-level changes (pages, layouts, components)
+- `ui`: UI components and styling
+- `api`: API routes and server-side logic
+- `config`: Configuration files (next.config, biome.jsonc, etc.)
+- `deps`: Dependency updates
+- `types`: TypeScript type definitions
+- `utils`: Utility functions and helpers
+- `assets`: Static assets (images, icons, etc.)
+
+### Message
+
+The **message** is a brief, descriptive summary of the commit. It should be concise but informative, providing enough detail to understand the change's purpose.
+
+**Message Rules:**
+- Use imperative mood ("add" not "added" or "adds")
+- Keep it concise but descriptive
+- Start with lowercase letter
+- No period at the end
+- Maximum 72 characters for the subject line
+
+### Examples
+
+Here are some examples of conventional commits for this project:
+
+- `feat(users) Add user registration feature`
+- `fix(validation) Correct input validation issue`
+- `docs(readme) Update installation instructions`
+- `style(css) Format stylesheets according to style guide`
+- `refactor(database) Optimize database queries`
+- `test(api) Add integration tests for API endpoints`
+- `feat(app) Add user authentication page`
+- `fix(ui) Resolve button hover state issue`
+- `docs Update README with setup instructions`
+- `refactor(api) Simplify user data fetching logic`
+- `chore(deps) Update Next.js to v15.5.4`
+- `style Format code with Biome`
+- `perf(app) Optimize image loading with next/image`
+- `test(utils) Add unit tests for date formatting`
+- `build(config) Configure Biome linting rules`
